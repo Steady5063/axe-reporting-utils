@@ -1,0 +1,35 @@
+{
+  "name": "axe-reporting-utils",
+  "version": "1.0.0",
+  "description": "A set of different reporting utilities to use for representing axe-core data",
+  "keywords": [
+    "axe",
+    "accessibility",
+    "testing",
+    "a11y"
+  ],
+  "homepage": "https://github.com/Steady5063/axe-reporting-utils#readme",
+  "bugs": {
+    "url": "https://github.com/Steady5063/axe-reporting-utils/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Steady5063/axe-reporting-utils.git"
+  },
+  "license": "ISC",
+  "author": "Mark Steadman",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axe-core": "^4.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
