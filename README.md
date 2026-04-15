@@ -11,15 +11,17 @@ npm install axe-reporting-utils
 ## Usage
 
 ```typescript
-import { logViolations } from 'axe-reporting-utils';
+import { logViolations, logReport } from 'axe-reporting-utils';
 
 // Assuming you have axe-core results
 const results = await axe.run(document);
 
+// Log to console
 logViolations(results);
-```
 
-This will log all violations found in the scan to the console, including details like impact, help text, and affected nodes.
+// Write detailed report to file
+logReport(results, './axe-report.txt');
+```
 
 ## API
 
@@ -28,3 +30,10 @@ This will log all violations found in the scan to the console, including details
 Logs axe-core violations to the console.
 
 - `results`: The axe-core scan results object.
+
+### `logReport(results: AxeResults, filePath: string): void`
+
+Writes a detailed axe-core report to a text file, including violations and incomplete results.
+
+- `results`: The axe-core scan results object.
+- `filePath`: The path where the report file should be saved.
