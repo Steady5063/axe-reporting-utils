@@ -1,2 +1,2 @@
-export { logViolations } from './reporters/logger';
+export { logViolations } from './reporters/consoleLogger';
 export { logReport } from './reporters/logReport';
