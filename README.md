@@ -1,9 +1,9 @@
 # Axe Reporting Utils
 
-A TypeScript library for generating various reports from axe-core accessibility scan results.
+A library for generating various reports from axe-core accessibility scan results.
 
 ## Installation
-
+NOT YET PUBLISHED TO NPM
 ```bash
 npm install axe-reporting-utils
 ```
