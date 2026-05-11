@@ -1,3 +1,3 @@
-export { logViolations } from './reporters/logViolations';
-export { logReport } from './reporters/textReport';
-export { logJsonReport } from './reporters/jsonReport';
+export { axeConsoleLogger } from './reporters/axeConsoleLogger';
+export { axeTextReport } from './reporters/axeTextReport';
+export { axeJsonReport } from './reporters/axeJsonReport';

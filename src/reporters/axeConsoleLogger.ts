@@ -4,7 +4,7 @@ import { AxeResults } from 'axe-core';
  * Logs axe-core violations to the console.
  * @param results The axe-core scan results.
  */
-export function logViolations(results: AxeResults): void {
+export function axeConsoleLogger(results: AxeResults): void {
   if (results.violations.length === 0) {
     console.log('No violations found.');
     return;

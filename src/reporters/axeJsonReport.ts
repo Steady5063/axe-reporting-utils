@@ -9,7 +9,7 @@ import { join } from 'path';
  * @param folderPath Folder path where the JSON file should be written.
  * @param fileName Name of the JSON file.
  */
-export function logJsonReport(results: AxeResults, folderPath: string, fileName: string): void {
+export function axeJsonReport(results: AxeResults, folderPath: string, fileName: string): void {
   const outputPath = join(folderPath, fileName);
 
   try {

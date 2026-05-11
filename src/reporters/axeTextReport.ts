@@ -67,7 +67,7 @@ function formatIncompletes(incomplete: AxeResults['incomplete']): string {
  * @param results The axe-core scan results.
  * @param filePath The path where the log file should be written.
  */
-export function logReport(results: AxeResults, filePath: string): void {
+export function axeTextReport(results: AxeResults, filePath: string): void {
   const formattedViolations = formatViolations(results.violations);
   const formattedIncompletes = formatIncompletes(results.incomplete);
 
