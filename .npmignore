@@ -1,0 +1,19 @@
+# Source files
+src/
+
+# Tests
+tests/
+test-results/
+playwright-report/
+
+# Build configuration
+tsconfig.json
+playwright.config.ts
+
+# Development files
+.gitignore
+*.log
+
+# Node modules (though npm handles this)
+node_modules/
+package-lock.json
