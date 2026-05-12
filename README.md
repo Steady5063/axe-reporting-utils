@@ -10,18 +10,24 @@ A comprehensive set of reporting utilities for axe-core accessibility scan resul
 - **Console Logging**: Quickly log accessibility violations to the console during development
 - **Detailed Text Reports**: Generate human-readable text files with full violation details, including HTML snippets and failure summaries
 - **JSON Export**: Save raw axe-core results as formatted JSON files for further processing or archival
-- **TypeScript Support**: Fully typed for seamless integration with TypeScript projects
 - **Zero Dependencies**: Only requires axe-core as a peer dependency
 
 ## Installation
 
-**Note: This package is not yet published to npm. Install from source:**
+Install from npm:
+
+```bash
+npm install axe-reporting-utils
+```
+
+
+Or install directly from GitHub if you want the latest source version:
 
 ```bash
 npm install https://github.com/Steady5063/axe-reporting-utils.git
 ```
 
-Or clone and build locally:
+For local development:
 
 ```bash
 git clone https://github.com/Steady5063/axe-reporting-utils.git
