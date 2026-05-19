@@ -10,6 +10,7 @@ A comprehensive set of reporting utilities for axe-core accessibility scan resul
 - **Console Logging**: Quickly log accessibility violations to the console during development
 - **Detailed Text Reports**: Generate human-readable text files with full violation details, including HTML snippets and failure summaries
 - **JSON Export**: Save raw axe-core results as formatted JSON files for further processing or archival
+- **Summary HTML Report**: Aggregate multiple axe scans into a slick HTML summary broken down by impact (critical, serious, moderate, minor)
 - **Zero Dependencies**: Only requires axe-core as a peer dependency
 
 ## Installation
@@ -39,7 +40,7 @@ npm run build
 ## Usage
 
 ```typescript
-import { axeConsoleLogger, axeTextReport, axeJsonReport } from 'axe-reporting-utils';
+import { axeConsoleLogger, axeTextReport, axeJsonReport, axeSummaryReport } from 'axe-reporting-utils';
 
 // Assuming you have axe-core results
 const results = await axe.run(document);
@@ -52,6 +53,12 @@ axeTextReport(results, './accessibility-report.txt');
 
 // 3. Export raw JSON data
 axeJsonReport(results, './reports', 'axe-results.json');
+
+// 4. Aggregate multiple scan results into a single HTML summary
+// Collect `AxeResults` from each scan into an array (e.g., per test or per page),
+// then call `axeSummaryReport` with the array and an output file path.
+const allResults = [results /* , moreResults */];
+axeSummaryReport(allResults, './reports/axe-summary-report.html');
 ```
 
 ### Example Output
@@ -103,6 +110,22 @@ Saves the complete axe-core results as a formatted JSON file.
 - `results`: The axe-core scan results object
 - `folderPath`: Directory path where the JSON file should be created
 - `fileName`: Name of the JSON file to create
+
+### `axeSummaryReport(resultsArray: AxeResults[], filePath: string): void`
+
+Generates a single HTML summary report that aggregates multiple `AxeResults` objects (for example, results from multiple pages or test runs).
+
+- `resultsArray`: An array of axe-core results to aggregate (only `violations` are considered; `incomplete` entries are ignored).
+- `filePath`: Path where the HTML summary report should be saved.
+
+The HTML report includes:
+- Total scans aggregated
+- Total unique violation types
+- Total affected nodes
+- Breakdown by impact levels: `critical`, `serious`, `moderate`, `minor`
+- Per-scan breakdown table
+
+The report styling is a clean white/silver/green theme and includes a small accessibility logo in the header.
 
 ## Integration Examples
 
