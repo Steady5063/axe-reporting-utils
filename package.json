@@ -1,12 +1,13 @@
 {
   "name": "axe-reporting-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A set of different reporting utilities to use for representing axe-core data",
   "keywords": [
     "axe",
     "accessibility",
     "testing",
-    "a11y"
+    "a11y",
+    "reporting"
   ],
   "homepage": "https://github.com/Steady5063/axe-reporting-utils#readme",
   "bugs": {
